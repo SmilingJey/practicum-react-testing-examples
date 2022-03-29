@@ -18,13 +18,4 @@ function InfoTooltip({ isOpen, onClose, status: { iconType, text } = {} }) {
   );
 }
 
-InfoTooltip.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  status: PropTypes.shape({
-    iconType: PropTypes.oneOf(['success', 'error']).isRequired,
-    text: PropTypes.string.isRequired
-  })
-}
-
 export default InfoTooltip;

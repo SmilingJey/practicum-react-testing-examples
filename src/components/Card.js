@@ -32,7 +32,7 @@ function Card({ card, onImageClick, onDelete }) {
   }
 
   return (
-    <li className='places__item card'>
+    <li className='places__item1 card'>
       <div
         className='card__image'
         style={{ backgroundImage: `url(${card.link})` }}
