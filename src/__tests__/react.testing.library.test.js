@@ -11,27 +11,23 @@ describe('Header component', () => {
     afterEach(cleanup)
 
     test('should has img with logo class', () => {
-        const history = createMemoryHistory();
         const textProp = 'Логотип проекта Mesto';
         render(
-          <Router history={history}>
-            <Provider store={store}>
-              <Header />
-            </Provider>
-          </Router>
+            <BrowserRouter>
+                <Provider store={store}><Header/></Provider>
+            </BrowserRouter>
         );
         const img = screen.getByAltText(textProp);
         expect(img).toHaveClass('logo');
     })
 
     test('should has header-wrapper-element with class header__wrapper', () => {
-        const history = createMemoryHistory();
         const textProp = 'header-wrapper-element';
         const pathProp = '/signup';
         render(
-            <Router history={history}>
+            <BrowserRouter>
                 <Provider store={store}><Header path={pathProp} /></Provider>
-            </Router>
+            </BrowserRouter>
         );
         const element = screen.getByTestId(textProp);
         expect(element).toHaveClass('header__wrapper');
