@@ -1,6 +1,6 @@
 import {getResponse} from '../utils/utils';
 
-const testObject = {
+let testObject = {
   ok: true, 
   json: function () {return {
     result: 'OK'
