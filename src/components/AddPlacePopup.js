@@ -76,4 +76,9 @@ function AddPlacePopup({ isOpen, onClose }) {
   );
 }
 
+AddPlacePopup.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
+};
+
 export default AddPlacePopup;
